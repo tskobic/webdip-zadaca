@@ -1,0 +1,11 @@
+.list--unstyled {
+    list-style: none;
+}
+
+.list--horizontal {
+    display: flex;
+}
+
+.list--horizontal > li:not(:last-child) {
+    margin-right: 30px;
+}

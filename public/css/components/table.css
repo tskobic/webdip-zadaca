@@ -1,0 +1,23 @@
+.table tr {
+    height: 50px;
+}
+
+.table th,
+.table td {
+    padding-left: 10px;
+    padding-right: 10px;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.table__head {
+    height: 50px;
+}
+
+.table__head--dark {
+    background-color: var(--primary-color);
+    color: var(--font-secondary-color);
+}
+
+.table__body {
+    background-color: var(--color-grey-light);
+}

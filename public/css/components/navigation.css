@@ -1,0 +1,7 @@
+.navigation {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    background-color: var(--primary-color);
+    color: #fff;
+}

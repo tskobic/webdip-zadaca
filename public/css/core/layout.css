@@ -1,0 +1,11 @@
+header {
+    width: 100%;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    height: 250px;
+}
