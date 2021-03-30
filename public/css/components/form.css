@@ -1,0 +1,27 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 400px;
+    align-items: center;
+    padding: 40px 30px;
+    border-radius: 10px;
+}
+
+.form>input,
+.form>select {
+    margin-bottom: 1.2rem;
+    width: 80%;
+    max-width: 250px;
+    border: 1px solid rgba(0, 0, 0, .2);
+}
+
+.form>input {
+    height: 20px;
+}
+
+@media (min-width: 992px) {
+    .form {
+        border: 1px solid rgba(0, 0, 0, .2);
+    }
+}

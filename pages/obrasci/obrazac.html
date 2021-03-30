@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="hr">
+
+<head>
+    <title>Početna</title>
+    <meta charset="UTF-8">
+    <meta title="Obrazac">
+    <meta author="Toni Škobić">
+    <meta description="30.3.2021. Stranica O autoru web stranice, ključne riječi: obrazac, sport, novosti">
+    <link rel="stylesheet" href="../../public/css/main.css">
+</head>
+
+<body>
+    <header class="m-b-md">
+        <nav class="box-fluid navigation">
+            <ul class="list--unstyled list--horizontal">
+                <li>
+                    <a href="../root/index.html">Početna</a>
+                </li>
+                <li>
+                    <a href="../root/autor.html">O autoru</a>
+                </li>
+                <li>
+                    <a href="../root/galerija.html">Galerija</a>
+                </li>
+                <li>
+                    <a href="./prijava.html">Prijava</a>
+                </li>
+                <li>
+                    <a href="./registracija.html">Registracija</a>
+                </li>
+                <li>
+                    <a href="./obrazac.html">Obrazac</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="box">
+        <form class="form centered" method="POST">
+            <label for="date">Datum:</label>
+            <input type="date" name="date">
+
+            <label for="time">Vrijeme:</label>
+            <input type="time" name="time">
+
+            <label for="teams">Odaberite tim:</label>
+
+            <select name="teams" multiple size="5">
+                <option value="barcelona" selected>Barcelona</option>
+                <option value="realmadrid">Real Madrid</option>
+                <option value="atleticomadrid">Atletico Madrid</option>
+                <option value="sevilla">Sevilla</option>
+                <option value="valencia">Valencia</option>
+                <option value="realbetis">Real Betis</option>
+                <option value="granada">Granada</option>
+            </select>
+
+            <select name="teams">
+                <optgroup label="Liga prvaka">
+                    <option value="barcelona">Barcelona</option>
+                    <option value="realmadrid">Real Madrid</option>
+                    <option value="atleticomadrid">Atletico Madrid</option>
+                    <option value="sevilla">Sevilla</option>
+                </optgroup>  
+                <optgroup label="Europa liga">
+                    <option value="valencia">Valencia</option>
+                    <option value="realbetis">Real Betis</option>
+                    <option value="granada">Granada</option>
+                </optgroup>
+            </select>
+
+            <label for="name">Ime:</label>
+            <input type="text" name="name">
+
+            <label for="surname">Prezime:</label>
+            <input type="text" name="surname">
+
+            <label for="goals">Golovi:</label>
+            <input type="number" name="goals">
+
+            <label for="dribbles">Dribling:</label>
+            <input type="number" name="dribbles">
+
+            <label for="interceptions">Oduzete lopte:</label>
+            <input type="number" name="interceptions">
+
+            <label for="assists">Asistencije:</label>
+            <input type="number" name="assists">
+
+            <label for="passes">Dodavanja:</label>
+            <input type="number" name="passes">
+
+            <label for="rating">Ocjena:</label>
+            <input type="number" name="rating">
+
+            <button type="reset" name="reset" class="button button--primary m-t-md">Resetiraj</button>
+            <button type="submit" name="submit" class="button button--primary m-t-md">Registriraj se</button>
+        </form>
+    </main>
+    <footer class="box-fluid footer m-t-md">
+        <div>
+            <a href="../root/autor.html">Toni Škobić</a>
+            <p>&copy; 2021 T. Škobić</p>
+        </div>
+    </footer>
+</body>
+
+</html>

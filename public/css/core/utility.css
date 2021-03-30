@@ -24,6 +24,12 @@
     }
 }
 
+.centered {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .m-b-md {
     margin-bottom: var(--gap-md);
 }
