@@ -2,7 +2,6 @@
 @import url('./core/colors.css');
 @import url('./core/fonts.css');
 @import url('./core/layout.css');
-@import url('./core/utility.css');
 @import url('./components/table.css');
 @import url('./components/navigation.css');
 @import url('./components/list.css');
@@ -11,3 +10,9 @@
 @import url('./components/button.css');
 @import url('./components/gallery.css');
 @import url('./components/video.css');
+@import url('../css/utility/utility.css');
+@import url('../css/utility/icons.css');
+@import url('../css/utility/gaps.css');
+@import url('../css/utility/containers.css');
+@import url('../css/utility/grid.css');
+@import url('../css/utility/text.css');

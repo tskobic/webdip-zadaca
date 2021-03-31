@@ -1,0 +1,10 @@
+.centered {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.center-content {
+    display: flex;
+    justify-content: center;
+}

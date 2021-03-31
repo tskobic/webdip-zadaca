@@ -5,9 +5,10 @@
 <head>
     <title>Početna</title>
     <meta charset="UTF-8">
-    <meta title="Galerija">
-    <meta author="Toni Škobić">
-    <meta description="30.3.2021. Stranica galerija, ključne riječi: galerija, sport, novosti">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Galerija">
+    <meta name="author" content="Toni Škobić">
+    <meta name="description" content="30.3.2021. Stranica galerija, ključne riječi: galerija, sport, novosti">
     <link rel="stylesheet" href="../../public/css/main.css">
     <style>
         .zoom {
@@ -28,6 +29,7 @@
 
 <body>
     <header class="m-b-md">
+        <a class="title link" href="#content">Galerija</a>
         <nav class="box-fluid navigation">
             <ul class="list--unstyled list--horizontal">
                 <li>
@@ -50,14 +52,19 @@
                 </li>
             </ul>
         </nav>
+        <section aria-label="social networks">
+            <img class="social-icon" src="../../public/multimedija/images/facebook.png" alt="facebook">
+            <img class="social-icon m-l-sm" src="../../public/multimedija/images/instagram.png" alt="instagram">
+            <img class="social-icon m-l-sm" src="../../public/multimedija/images/rss.png" alt="rss">
+        </section>
     </header>
-    <main>
-        <section class="gallery" role="gallery">
+    <main id="content">
+        <section class="gallery" aria-label="gallery">
             <div class="gallery__image">
                 <figure class="zoom">
                     <picture>
                         <source srcset="../../public/multimedija/images/barcelona.png">
-                        <img alt="Barcelona">
+                        <img src="../../public/multimedija/images/barcelona.png" alt="Barcelona">
                     </picture>
                     <figcaption>Barcelona</figcaption>
                 </figure>
@@ -66,7 +73,7 @@
                 <figure class="zoom">
                     <picture>
                         <source srcset="../../public/multimedija/images/benzema.jpg">
-                        <img alt="Benzema">
+                        <img src="../../public/multimedija/images/benzema.jpg" alt="Benzema">
                     </picture>
                     <figcaption>Benzema</figcaption>
                 </figure>
@@ -75,7 +82,7 @@
                 <figure class="zoom">
                     <picture>
                         <source srcset="../../public/multimedija/images/granadaplayers.jpg">
-                        <img alt="Flowers">
+                        <img src="../../public/multimedija/images/granadaplayers.jpg" alt="Flowers">
                     </picture>
                     <figcaption>Igrači Granade</figcaption>
                 </figure>
@@ -84,7 +91,7 @@
                 <figure class="zoom">
                     <picture>
                         <source srcset="../../public/multimedija/images/griezmann.jpg">
-                        <img alt="Antoine Griezmann">
+                        <img src="../../public/multimedija/images/griezmann.jpg" alt="Antoine Griezmann">
                     </picture>
                     <figcaption>Antoine Griezmann</figcaption>
                 </figure>
@@ -93,7 +100,7 @@
                 <figure class="zoom">
                     <picture>
                         <source srcset="../../public/multimedija/images/joaofelix.jpg">
-                        <img alt="Joao Felix">
+                        <img src="../../public/multimedija/images/joaofelix.jpg" alt="Joao Felix">
                     </picture>
                     <figcaption>Joao Felix</figcaption>
                 </figure>
@@ -102,7 +109,7 @@
                 <figure class="zoom">
                     <picture>
                         <source srcset="../../public/multimedija/images/koke.jpg">
-                        <img alt="Koke">
+                        <img src="../../public/multimedija/images/koke.jpg" alt="Koke">
                     </picture>
                     <figcaption>Koke</figcaption>
                 </figure>
@@ -111,7 +118,7 @@
                 <figure class="zoom">
                     <picture>
                         <source srcset="../../public/multimedija/images/laliga.png">
-                        <img alt="LaLiga">
+                        <img src="../../public/multimedija/images/laliga.png" alt="LaLiga">
                     </picture>
                     <figcaption>LaLiga logo</figcaption>
                 </figure>
@@ -120,7 +127,7 @@
                 <figure class="zoom">
                     <picture>
                         <source srcset="../../public/multimedija/images/laligaball.jpg">
-                        <img alt="LaLiga lopta">
+                        <img src="../../public/multimedija/images/laligaball.jpg" alt="LaLiga lopta">
                     </picture>
                     <figcaption>LaLiga lopta</figcaption>
                 </figure>
@@ -129,7 +136,7 @@
                 <figure class="zoom">
                     <picture>
                         <source srcset="../../public/multimedija/images/messi.jpeg">
-                        <img alt="Lionel Messi">
+                        <img src="../../public/multimedija/images/messi.jpeg" alt="Lionel Messi">
                     </picture>
                     <figcaption>Lionel Messi</figcaption>
                 </figure>
@@ -138,7 +145,7 @@
                 <figure class="zoom">
                     <picture>
                         <source srcset="../../public/multimedija/images/modrić.jpeg">
-                        <img alt="Luka Modrić">
+                        <img src="../../public/multimedija/images/modrić.jpeg" alt="Luka Modrić">
                     </picture>
                     <figcaption>Luka Modrić</figcaption>
                 </figure>
@@ -147,7 +154,7 @@
                 <figure class="zoom">
                     <picture>
                         <source srcset="../../public/multimedija/images/ramos.jpg">
-                        <img alt="Sergio Ramos">
+                        <img src="../../public/multimedija/images/ramos.jpg" alt="Sergio Ramos">
                     </picture>
                     <figcaption>Sergio Ramos</figcaption>
                 </figure>
@@ -156,7 +163,7 @@
                 <figure class="zoom">
                     <picture>
                         <source srcset="../../public/multimedija/images/suarez.jpg">
-                        <img alt="Luis Suarez">
+                        <img src="../../public/multimedija/images/suarez.jpg" alt="Luis Suarez">
                     </picture>
                     <figcaption>Luis Suarez</figcaption>
                 </figure>
@@ -168,6 +175,14 @@
             <a href="./autor.html">Toni Škobić</a>
             <p>&copy; 2021 T. Škobić</p>
         </div>
+        <section aria-label="validation references">
+            <a href="" class="m-l-sm">
+                <img src="../../public/multimedija/images/HTML5.png" alt="html5">
+            </a>
+            <a href="" class="m-l-sm">
+                <img src="../../public/multimedija/images/css3.png" alt="css3">
+            </a>
+        </section>
     </footer>
 </body>
 

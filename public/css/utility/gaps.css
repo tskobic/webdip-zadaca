@@ -1,0 +1,22 @@
+
+:root {
+    --gap-lg: 100px;
+    --gap-md: 50px;
+    --gap-sm: 25px;
+}
+
+.m-b-md {
+    margin-bottom: var(--gap-md);
+}
+
+.m-b-sm {
+    margin-bottom: var(--gap-sm);
+}
+
+.m-l-sm {
+    margin-left: var(--gap-sm);
+}
+
+.m-t-md {
+    margin-top: var(--gap-md);
+}

@@ -5,9 +5,10 @@
 <head>
     <title>Početna</title>
     <meta charset="UTF-8">
-    <meta title="O autoru">
-    <meta author="Toni Škobić">
-    <meta description="30.3.2021. Stranica O autoru web stranice, ključne riječi: autor, sport, novosti">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="O autoru">
+    <meta name="author" content="Toni Škobić">
+    <meta name="description" content="30.3.2021. Stranica O autoru web stranice, ključne riječi: autor, sport, novosti">
     <link rel="stylesheet" href="../../public/css/main.css">
     <style>
         body {
@@ -22,6 +23,7 @@
 
 <body>
     <header class="m-b-md">
+        <a class="title link" href="#content">Autor</a>
         <nav class="box-fluid navigation">
             <ul class="list--unstyled list--horizontal">
                 <li>
@@ -44,9 +46,14 @@
                 </li>
             </ul>
         </nav>
+        <section aria-label="social networks">
+            <img class="social-icon" src="../../public/multimedija/images/facebook.png" alt="facebook">
+            <img class="social-icon m-l-sm" src="../../public/multimedija/images/instagram.png" alt="instagram">
+            <img class="social-icon m-l-sm" src="../../public/multimedija/images/rss.png" alt="rss">
+        </section>
     </header>
-    <main>
-        <section role="about author" class="box centered">
+    <main id="content">
+        <section aria-label="about author" class="box centered">
             <ul class="list--unstyled">
                 <li>
                     Ime: Toni
@@ -63,7 +70,7 @@
             <figure>
                 <picture>
                     <source srcset="../../public/multimedija/images/profilna.jpeg">
-                    <img alt="Toni Škobić">
+                    <img src="../../public/multimedija/images/profilna.jpeg" alt="Toni Škobić">
                 </picture>
                 <figcaption>Toni Škobić</figcaption>
             </figure>
@@ -71,14 +78,21 @@
                 <p>"Morate se boriti da biste postigli svoj san. Za to se morate žrtvovati i puno raditi."</p>
             </blockquote>
         </section>
-        <iframe class="centered video" src="https://www.youtube.com/embed/PSanJ5swYBM?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </main>
+        <iframe class="centered video" src="https://www.youtube.com/embed/PSanJ5swYBM?autoplay=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </main>
     <footer class="box-fluid footer m-t-md">
         <div>
             <a href="./autor.html">Toni Škobić</a>
             <p>&copy; 2021 T. Škobić</p>
         </div>
+        <section aria-label="validation references">
+            <a href="" class="m-l-sm">
+                <img src="../../public/multimedija/images/HTML5.png" alt="html5">
+            </a>
+            <a href="" class="m-l-sm">
+                <img src="../../public/multimedija/images/css3.png" alt="css3">
+            </a>
+        </section>
     </footer>
 </body>
 

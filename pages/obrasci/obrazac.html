@@ -5,14 +5,16 @@
 <head>
     <title>Početna</title>
     <meta charset="UTF-8">
-    <meta title="Obrazac">
-    <meta author="Toni Škobić">
-    <meta description="30.3.2021. Stranica O autoru web stranice, ključne riječi: obrazac, sport, novosti">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Obrazac">
+    <meta name="author" content="Toni Škobić">
+    <meta name="description" content="30.3.2021. Stranica O autoru web stranice, ključne riječi: obrazac, sport, novosti">
     <link rel="stylesheet" href="../../public/css/main.css">
 </head>
 
 <body>
     <header class="m-b-md">
+        <a class="title link" href="#content">Obrazac</a>
         <nav class="box-fluid navigation">
             <ul class="list--unstyled list--horizontal">
                 <li>
@@ -35,18 +37,23 @@
                 </li>
             </ul>
         </nav>
+        <section aria-label="social networks">
+            <img class="social-icon" src="../../../public/multimedija/images/facebook.png" alt="facebook">
+            <img class="social-icon m-l-sm" src="../../../public/multimedija/images/instagram.png" alt="instagram">
+            <img class="social-icon m-l-sm" src="../../../public/multimedija/images/rss.png" alt="rss">
+        </section>
     </header>
-    <main class="box">
-        <form class="form centered" method="POST">
+    <main id="content" class="box">
+        <form class="form centered" method="post" action="http://barka.foi.hr/WebDiP/2020/materijali/zadace/ispis_forme.php">
             <label for="date">Datum:</label>
-            <input type="date" name="date">
+            <input type="date" name="date" id="date">
 
             <label for="time">Vrijeme:</label>
-            <input type="time" name="time">
+            <input type="time" name="time" id="time">
 
             <label for="teams">Odaberite tim:</label>
 
-            <select name="teams" multiple size="5">
+            <select name="teams" id="teams" size="5">
                 <option value="barcelona" selected>Barcelona</option>
                 <option value="realmadrid">Real Madrid</option>
                 <option value="atleticomadrid">Atletico Madrid</option>
@@ -56,43 +63,57 @@
                 <option value="granada">Granada</option>
             </select>
 
-            <select name="teams">
-                <optgroup label="Liga prvaka">
-                    <option value="barcelona">Barcelona</option>
-                    <option value="realmadrid">Real Madrid</option>
-                    <option value="atleticomadrid">Atletico Madrid</option>
-                    <option value="sevilla">Sevilla</option>
-                </optgroup>  
-                <optgroup label="Europa liga">
-                    <option value="valencia">Valencia</option>
-                    <option value="realbetis">Real Betis</option>
-                    <option value="granada">Granada</option>
-                </optgroup>
-            </select>
-
             <label for="name">Ime:</label>
-            <input type="text" name="name">
+            <input type="text" name="name" id="name">
 
             <label for="surname">Prezime:</label>
-            <input type="text" name="surname">
+            <input type="text" name="surname" id="surname">
 
-            <label for="goals">Golovi:</label>
-            <input type="number" name="goals">
+            <fieldset class="m-b-sm" id="first_team">
+                <legend>Europa liga</legend>
+                <label for="first_team1">Valencia</label>
+                <input type="radio" name="first_team" id="first_team1">
+                <label for="first_team2">Real betis</label>
+                <input type="radio" name="first_team" id="first_team2">
+                <label for="first_team3">Granada</label>
+                <input type="radio" name="first_team" id="first_team3">
+            </fieldset>
+            
+            <fieldset class="m-b-sm" id="second_team">
+                <legend>Liga prvaka</legend>
+                <label for="second_team1">Barcelona</label>
+                <input type="radio" name="second_team" id="second_team1">
+                <label for="second_team2">Chelsea</label>
+                <input type="radio" name="second_team" id="second_team2">
+                <label for="second_team3">Hajduk</label>
+                <input type="radio" name="second_team" id="second_team3">
+            </fieldset>
 
-            <label for="dribbles">Dribling:</label>
-            <input type="number" name="dribbles">
+            <fieldset class="m-b-sm">
+                <legend>Statistika</legend>
+                <label for="goals">Golovi:</label>
+                <input type="number" name="goals" id="goals">
+    
+                <label for="dribbles">Dribling:</label>
+                <input type="number" name="dribbles" id="dribbles">
+    
+                <label for="interceptions">Oduzete lopte:</label>
+                <input type="number" name="interceptions" id="interceptions">
+    
+                <label for="assists">Asistencije:</label>
+                <input type="number" name="assists" id="assists">
+    
+                <label for="passes">Dodavanja:</label>
+                <input type="number" name="passes" id="passes">
+            </fieldset>
 
-            <label for="interceptions">Oduzete lopte:</label>
-            <input type="number" name="interceptions">
-
-            <label for="assists">Asistencije:</label>
-            <input type="number" name="assists">
-
-            <label for="passes">Dodavanja:</label>
-            <input type="number" name="passes">
+            <input type="range">
+            <input type="time">
+            <input type="month">
+            <input type="search">
 
             <label for="rating">Ocjena:</label>
-            <input type="number" name="rating">
+            <input type="number" name="rating" id="rating">
 
             <button type="reset" name="reset" class="button button--primary m-t-md">Resetiraj</button>
             <button type="submit" name="submit" class="button button--primary m-t-md">Registriraj se</button>
@@ -100,9 +121,17 @@
     </main>
     <footer class="box-fluid footer m-t-md">
         <div>
-            <a href="../root/autor.html">Toni Škobić</a>
+            <a href="./autor.html">Toni Škobić</a>
             <p>&copy; 2021 T. Škobić</p>
         </div>
+        <section aria-label="validation references">
+            <a href="" class="m-l-sm">
+                <img src="../../../public/multimedija/images/HTML5.png" alt="html5">
+            </a>
+            <a href="" class="m-l-sm">
+                <img src="../../../public/multimedija/images/css3.png" alt="css3">
+            </a>
+        </section>
     </footer>
 </body>
 

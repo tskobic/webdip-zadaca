@@ -5,14 +5,16 @@
 <head>
     <title>Početna</title>
     <meta charset="UTF-8">
-    <meta title="Registracija">
-    <meta author="Toni Škobić">
-    <meta description="30.3.2021. Stranica registracije, ključne riječi: registracija, sport, novosti">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Registracija">
+    <meta name="author" content="Toni Škobić">
+    <meta name="description" content="30.3.2021. Stranica registracije, ključne riječi: registracija, sport, novosti">
     <link rel="stylesheet" href="../../public/css/main.css">
 </head>
 
 <body>
     <header class="m-b-md">
+        <a class="title link" href="#content">Registracija</a>
         <nav class="box-fluid navigation">
             <ul class="list--unstyled list--horizontal">
                 <li>
@@ -35,35 +37,48 @@
                 </li>
             </ul>
         </nav>
+        <section aria-label="social networks">
+            <img class="social-icon" src="../../../public/multimedija/images/facebook.png" alt="facebook">
+            <img class="social-icon m-l-sm" src="../../../public/multimedija/images/instagram.png" alt="instagram">
+            <img class="social-icon m-l-sm" src="../../../public/multimedija/images/rss.png" alt="rss">
+        </section>
     </header>
-    <main class="box">
-        <form class="form centered" method="POST">
+    <main id="content" class="box">
+        <form class="form centered" method="post" action="http://barka.foi.hr/WebDiP/2020/materijali/zadace/ispis_forme.php">
             <label for="name">Ime:</label>
-            <input type="text" name="name">
+            <input type="text" name="name" id="name">
 
             <label for="surname">Prezime:</label>
-            <input type="text" name="surname">
+            <input type="text" name="surname" id="surname">
 
             <label for="username">Korisničko ime:</label>
-            <input type="text" name="username">
+            <input type="text" name="username" id="username">
 
             <label for="e-mail">Elektronička pošta:</label>
-            <input type="email" name="e-mail">
+            <input type="email" name="e-mail" id="e-mail">
 
             <label for="password">Lozinka:</label>
-            <input type="password" name="password">
+            <input type="password" name="password" id="password">
 
-            <label for="confirm password">Potvrda lozinke:</label>
-            <input type="password" name="confirm password">
+            <label for="confirm_password">Potvrda lozinke:</label>
+            <input type="password" name="confirm password" id="confirm_password">
 
             <button type="submit" name="submit" class="button button--primary m-t-md">Registriraj se</button>
         </form>
     </main>
     <footer class="box-fluid footer m-t-md">
         <div>
-            <a href="../root/autor.html">Toni Škobić</a>
+            <a href="./autor.html">Toni Škobić</a>
             <p>&copy; 2021 T. Škobić</p>
         </div>
+        <section aria-label="validation references">
+            <a href="" class="m-l-sm">
+                <img src="../../../public/multimedija/images/HTML5.png" alt="html5">
+            </a>
+            <a href="" class="m-l-sm">
+                <img src="../../../public/multimedija/images/css3.png" alt="css3">
+            </a>
+        </section>
     </footer>
 </body>
 

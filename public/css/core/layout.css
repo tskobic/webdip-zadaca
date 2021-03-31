@@ -7,5 +7,8 @@ main {
 }
 
 footer {
+    display: flex;
+    box-sizing: border-box;
+    padding: 15px 50px;
     height: 100px;
 }
