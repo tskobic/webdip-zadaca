@@ -1,160 +1,211 @@
 <!DOCTYPE html>
 
 <html lang="hr">
+    <head>
+        <title>Obrazac</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="title" content="Obrazac" />
+        <meta name="author" content="Toni Škobić" />
+        <meta
+            name="description"
+            content="30.3.2021. Stranica obrazac web stranice, ključne riječi: obrazac, sport, novosti"
+        />
+        <link rel="stylesheet" href="../css/tskobic.css" />
+    </head>
 
-<head>
-    <title>Obrazac</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="title" content="Obrazac">
-    <meta name="author" content="Toni Škobić">
-    <meta name="description" content="30.3.2021. Stranica O autoru web stranice, ključne riječi: obrazac, sport, novosti">
-    <link rel="stylesheet" href="../css/tskobic.css">
-</head>
+    <body>
+        <header class="m-b-md">
+            <a class="title link" href="#content">Obrazac</a>
+            <nav class="box-fluid navigation">
+                <ul class="list--unstyled list--horizontal">
+                    <li>
+                        <a href="../index.html">Početna</a>
+                    </li>
+                    <li>
+                        <a href="../autor.html">O autoru</a>
+                    </li>
+                    <li>
+                        <a href="../galerija.html">Galerija</a>
+                    </li>
+                    <li>
+                        <a href="./prijava.html">Prijava</a>
+                    </li>
+                    <li>
+                        <a href="./registracija.html">Registracija</a>
+                    </li>
+                    <li>
+                        <a href="./obrazac.html">Obrazac</a>
+                    </li>
+                    <li>
+                        <a href="../era.html">ERA</a>
+                    </li>
+                    <li>
+                        <a href="../navigacijski.html">Navigacijski dijagram</a>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="box-fluid mobilenav">
+                <ul class="list--unstyled list--vertical">
+                    <li>
+                        <a href="../index.html">Početna</a>
+                    </li>
+                    <li>
+                        <a href="../autor.html">O autoru</a>
+                    </li>
+                    <li>
+                        <a href="../galerija.html">Galerija</a>
+                    </li>
+                    <li>
+                        <a href="./prijava.html">Prijava</a>
+                    </li>
+                    <li>
+                        <a href="./registracija.html">Registracija</a>
+                    </li>
+                    <li>
+                        <a href="./obrazac.html">Obrazac</a>
+                    </li>
+                    <li>
+                        <a href="../era.html">ERA</a>
+                    </li>
+                    <li>
+                        <a href="../navigacijski.html">Navigacijski dijagram</a>
+                    </li>
+                </ul>
+            </nav>
+            <section aria-label="social networks">
+                <img
+                    class="social-icon"
+                    src="../multimedija/images/facebook.png"
+                    alt="facebook"
+                />
+                <img
+                    class="social-icon m-l-sm"
+                    src="../multimedija/images/instagram.png"
+                    alt="instagram"
+                />
+                <img
+                    class="social-icon m-l-sm"
+                    src="../multimedija/images/rss.png"
+                    alt="rss"
+                />
+            </section>
+        </header>
+        <main id="content" class="box">
+            <form
+                class="form centered"
+                method="post"
+                action="http://barka.foi.hr/WebDiP/2020/materijali/zadace/ispis_forme.php"
+            >
+                <label for="date">Datum:</label>
+                <input type="date" name="date" id="date" />
 
-<body>
-    <header class="m-b-md">
-        <a class="title link" href="#content">Obrazac</a>
-        <nav class="box-fluid navigation">
-            <ul class="list--unstyled list--horizontal">
-                <li>
-                    <a href="../index.html">Početna</a>
-                </li>
-                <li>
-                    <a href="../autor.html">O autoru</a>
-                </li>
-                <li>
-                    <a href="../galerija.html">Galerija</a>
-                </li>
-                <li>
-                    <a href="./prijava.html">Prijava</a>
-                </li>
-                <li>
-                    <a href="./registracija.html">Registracija</a>
-                </li>
-                <li>
-                    <a href="./obrazac.html">Obrazac</a>
-                </li>
-            </ul>
-        </nav>
-        <nav class="box-fluid mobilenav">
-            <ul class="list--unstyled list--vertical">
-                <li>
-                    <a href="../index.html">Početna</a>
-                </li>
-                <li>
-                    <a href="../autor.html">O autoru</a>
-                </li>
-                <li>
-                    <a href="../galerija.html">Galerija</a>
-                </li>
-                <li>
-                    <a href="./prijava.html">Prijava</a>
-                </li>
-                <li>
-                    <a href="./registracija.html">Registracija</a>
-                </li>
-                <li>
-                    <a href="./obrazac.html">Obrazac</a>
-                </li>
-            </ul>
-        </nav>
-        <section aria-label="social networks">
-            <img class="social-icon" src="../multimedija/images/facebook.png" alt="facebook">
-            <img class="social-icon m-l-sm" src="../multimedija/images/instagram.png" alt="instagram">
-            <img class="social-icon m-l-sm" src="../multimedija/images/rss.png" alt="rss">
-        </section>
-    </header>
-    <main id="content" class="box">
-        <form class="form centered" method="post" action="http://barka.foi.hr/WebDiP/2020/materijali/zadace/ispis_forme.php">
-            <label for="date">Datum:</label>
-            <input type="date" name="date" id="date">
+                <label for="time">Vrijeme:</label>
+                <input type="time" name="time" id="time" />
 
-            <label for="time">Vrijeme:</label>
-            <input type="time" name="time" id="time">
+                <label for="teams">Odaberite tim:</label>
 
-            <label for="teams">Odaberite tim:</label>
+                <select name="teams" id="teams" size="5">
+                    <option value="barcelona" selected>Barcelona</option>
+                    <option value="realmadrid">Real Madrid</option>
+                    <option value="atleticomadrid">Atletico Madrid</option>
+                    <option value="sevilla">Sevilla</option>
+                    <option value="valencia">Valencia</option>
+                    <option value="realbetis">Real Betis</option>
+                    <option value="granada">Granada</option>
+                </select>
 
-            <select name="teams" id="teams" size="5">
-                <option value="barcelona" selected>Barcelona</option>
-                <option value="realmadrid">Real Madrid</option>
-                <option value="atleticomadrid">Atletico Madrid</option>
-                <option value="sevilla">Sevilla</option>
-                <option value="valencia">Valencia</option>
-                <option value="realbetis">Real Betis</option>
-                <option value="granada">Granada</option>
-            </select>
+                <label for="name">Ime:</label>
+                <input type="text" name="name" id="name" />
 
-            <label for="name">Ime:</label>
-            <input type="text" name="name" id="name">
+                <label for="surname">Prezime:</label>
+                <input type="text" name="surname" id="surname" />
 
-            <label for="surname">Prezime:</label>
-            <input type="text" name="surname" id="surname">
+                <fieldset class="m-b-sm" id="first_team">
+                    <legend>Europa liga</legend>
+                    <label for="first_team1">Valencia</label>
+                    <input type="radio" name="first_team" id="first_team1" />
+                    <label for="first_team2">Real betis</label>
+                    <input type="radio" name="first_team" id="first_team2" />
+                    <label for="first_team3">Granada</label>
+                    <input type="radio" name="first_team" id="first_team3" />
+                </fieldset>
 
-            <fieldset class="m-b-sm" id="first_team">
-                <legend>Europa liga</legend>
-                <label for="first_team1">Valencia</label>
-                <input type="radio" name="first_team" id="first_team1">
-                <label for="first_team2">Real betis</label>
-                <input type="radio" name="first_team" id="first_team2">
-                <label for="first_team3">Granada</label>
-                <input type="radio" name="first_team" id="first_team3">
-            </fieldset>
-            
-            <fieldset class="m-b-sm" id="second_team">
-                <legend>Liga prvaka</legend>
-                <label for="second_team1">Barcelona</label>
-                <input type="radio" name="second_team" id="second_team1">
-                <label for="second_team2">Chelsea</label>
-                <input type="radio" name="second_team" id="second_team2">
-                <label for="second_team3">Hajduk</label>
-                <input type="radio" name="second_team" id="second_team3">
-            </fieldset>
+                <fieldset class="m-b-sm" id="second_team">
+                    <legend>Liga prvaka</legend>
+                    <label for="second_team1">Barcelona</label>
+                    <input type="radio" name="second_team" id="second_team1" />
+                    <label for="second_team2">Chelsea</label>
+                    <input type="radio" name="second_team" id="second_team2" />
+                    <label for="second_team3">Hajduk</label>
+                    <input type="radio" name="second_team" id="second_team3" />
+                </fieldset>
 
-            <fieldset class="m-b-sm">
-                <legend>Statistika</legend>
-                <label for="goals">Golovi:</label>
-                <input type="number" name="goals" id="goals">
-    
-                <label for="dribbles">Dribling:</label>
-                <input type="number" name="dribbles" id="dribbles">
-    
-                <label for="interceptions">Oduzete lopte:</label>
-                <input type="number" name="interceptions" id="interceptions">
-    
-                <label for="assists">Asistencije:</label>
-                <input type="number" name="assists" id="assists">
-    
-                <label for="passes">Dodavanja:</label>
-                <input type="number" name="passes" id="passes">
-            </fieldset>
+                <fieldset class="m-b-sm">
+                    <legend>Statistika</legend>
+                    <label for="goals">Golovi:</label>
+                    <input type="number" name="goals" id="goals" />
 
-            <input type="range">
-            <input type="time">
-            <input type="month">
-            <input type="search">
+                    <label for="dribbles">Dribling:</label>
+                    <input type="number" name="dribbles" id="dribbles" />
 
-            <label for="rating">Ocjena:</label>
-            <input type="number" name="rating" id="rating">
+                    <label for="interceptions">Oduzete lopte:</label>
+                    <input
+                        type="number"
+                        name="interceptions"
+                        id="interceptions"
+                    />
 
-            <button type="reset" name="reset" class="button button--primary m-t-md">Resetiraj</button>
-            <button type="submit" name="submit" class="button button--primary m-t-md">Registriraj se</button>
-        </form>
-    </main>
-    <footer class="box-fluid footer m-t-md">
-        <div>
-            <a href="../autor.html">Toni Škobić</a>
-            <p>&copy; 2021 T. Škobić</p>
-        </div>
-        <section aria-label="validation references">
-            <a href="http://validator.w3.org/check?uri=http://barka.foi.hr/WebDiP/2020/zadaca_01/tskobic/obrazac.html" class="m-l-sm">
-                <img src="../multimedija/images/HTML5.png" alt="html5">
-            </a>
-            <a href="https://jigsaw.w3.org/css-validator/validator?uri=http://barka.foi.hr/WebDiP/2020/zadaca_01/tskobic/css/tskobic.css" class="m-l-sm">
-                <img src="../multimedija/images/css3.png" alt="css3">
-            </a>
-        </section>
-    </footer>
-</body>
+                    <label for="assists">Asistencije:</label>
+                    <input type="number" name="assists" id="assists" />
 
+                    <label for="passes">Dodavanja:</label>
+                    <input type="number" name="passes" id="passes" />
+                </fieldset>
+
+                <input type="range" />
+                <input type="time" />
+                <input type="month" />
+                <input type="search" />
+
+                <label for="rating">Ocjena:</label>
+                <input type="number" name="rating" id="rating" />
+
+                <button
+                    type="reset"
+                    name="reset"
+                    class="button button--primary m-t-md"
+                >
+                    Resetiraj
+                </button>
+                <button
+                    type="submit"
+                    name="submit"
+                    class="button button--primary m-t-md"
+                >
+                    Registriraj se
+                </button>
+            </form>
+        </main>
+        <footer class="box-fluid footer m-t-md">
+            <div>
+                <a href="../autor.html">Toni Škobić</a>
+                <p>&copy; 2021 T. Škobić</p>
+            </div>
+            <section aria-label="validation references">
+                <a
+                    href="http://validator.w3.org/check?uri=http://barka.foi.hr/WebDiP/2020/zadaca_02/tskobic/obrazac.html"
+                    class="m-l-sm"
+                >
+                    <img src="../multimedija/images/HTML5.png" alt="html5" />
+                </a>
+                <a
+                    href="https://jigsaw.w3.org/css-validator/validator?uri=http://barka.foi.hr/WebDiP/2020/zadaca_02/tskobic/css/tskobic.css"
+                    class="m-l-sm"
+                >
+                    <img src="../multimedija/images/css3.png" alt="css3" />
+                </a>
+            </section>
+        </footer>
+    </body>
 </html>

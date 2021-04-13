@@ -52,8 +52,9 @@ figure {
 }
 
 figcaption {
+    font-weight: bold;
     text-align: center;
-    margin-top: .7rem;
+    margin-top: 0.7rem;
 }
 
 fieldset {
@@ -78,11 +79,11 @@ h1 {
     height: -moz-fit-content;
 }
 
-input[type=text]{
+input[type="text"] {
     background-color: var(--secondary-color);
 }
 
-@media screen and (min-width: 1921px){
+@media screen and (min-width: 1921px) {
     body {
         font-size: 25px;
         font-family: Arial;
@@ -98,7 +99,7 @@ input[type=text]{
     --color-grey-light: #fafafa;
 }
 
-@media screen and (min-width: 1921px){
+@media screen and (min-width: 1921px) {
     :root {
         --primary-color: #e8aa01;
         --secondary-color: rgb(252, 95, 95);
@@ -181,7 +182,7 @@ footer {
 
 .social-icon {
     height: 50px;
-    width: 50px ;
+    width: 50px;
 }
 
 .title {
@@ -190,7 +191,7 @@ footer {
 }
 
 .link:hover {
-    color: var(--secondary-color)
+    color: var(--secondary-color);
 }
 
 .button {
@@ -208,7 +209,7 @@ footer {
 }
 
 .button--primary:hover {
-    opacity: .9;
+    opacity: 0.9;
 }
 
 .footer {
@@ -226,21 +227,21 @@ footer {
     border-radius: 10px;
 }
 
-.form>input,
-.form>select {
+.form > input,
+.form > select {
     margin-bottom: 1.2rem;
     width: 80%;
     max-width: 250px;
-    border: 1px solid rgba(0, 0, 0, .2);
+    border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-.form>input {
+.form > input {
     height: 20px;
 }
 
 @media (min-width: 992px) {
     .form {
-        border: 1px solid rgba(0, 0, 0, .2);
+        border: 1px solid rgba(0, 0, 0, 0.2);
     }
 }
 
@@ -261,7 +262,7 @@ footer {
 @media (min-width: 768px) {
     .gallery__image {
         flex-basis: 40%;
-        margin-right: .7rem;
+        margin-right: 0.7rem;
     }
 }
 
@@ -279,11 +280,11 @@ footer {
     display: flex;
 }
 
-.list--vertical>li:not(:last-child) {
+.list--vertical > li:not(:last-child) {
     margin-bottom: 1rem;
 }
 
-.list--horizontal>li:not(:last-child) {
+.list--horizontal > li:not(:last-child) {
     margin-right: 2rem;
 }
 
@@ -294,19 +295,18 @@ footer {
     flex-basis: 60%;
 }
 
-.mobilenav{
+.mobilenav {
     display: none;
 }
 
 @media (max-width: 991px) {
-    .navigation{
+    .navigation {
         display: none;
     }
 
-    .mobilenav{
+    .mobilenav {
         display: flex;
     }
-
 }
 
 .table tr {
@@ -337,4 +337,15 @@ footer {
     width: 100%;
     max-width: 600px;
     height: 300px;
+}
+
+.diagrams {
+    border: 4px solid;
+    border-radius: 10px;
+    padding: 15px 30px;
+    opacity: 0.6;
+}
+
+.figure-width {
+    width: 400px;
 }
