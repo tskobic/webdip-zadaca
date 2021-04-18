@@ -13,6 +13,7 @@ table {
 
 body {
     display: flex;
+    position: relative;
     align-items: center;
     flex-direction: column;
     min-height: 100vh;
@@ -151,6 +152,7 @@ footer {
     --gap-lg: 100px;
     --gap-md: 50px;
     --gap-sm: 25px;
+    --gap-xs: 10px;
 }
 
 .m-b-md {
@@ -169,6 +171,14 @@ footer {
     margin-top: var(--gap-md);
 }
 
+.m-t-sm {
+    margin-top: var(--gap-sm);
+}
+
+.m-t-xs {
+    margin-top: var(--gap-xs);
+}
+
 .centered {
     position: relative;
     left: 50%;
@@ -183,6 +193,10 @@ footer {
 .social-icon {
     height: 50px;
     width: 50px;
+}
+
+.social-icons {
+    display: flex;
 }
 
 .title {
@@ -276,15 +290,11 @@ footer {
     list-style: none;
 }
 
-.list--horizontal {
+.list--direction {
     display: flex;
 }
 
-.list--vertical > li:not(:last-child) {
-    margin-bottom: 1rem;
-}
-
-.list--horizontal > li:not(:last-child) {
+.list--direction > li:not(:last-child) {
     margin-right: 2rem;
 }
 
@@ -295,17 +305,37 @@ footer {
     flex-basis: 60%;
 }
 
-.mobilenav {
-    display: none;
+@media (max-width: 1170px) {
+    .social-icons {
+        flex-direction: column;
+        margin-top: var(--gap-sm);
+        margin-left: var(--gap-sm);
+    }
+
+    img.m-l-sm {
+        margin-left: 0px;
+        margin-bottom: var(--gap-sm);
+    }
 }
 
 @media (max-width: 991px) {
     .navigation {
-        display: none;
+        flex-direction: column;
+        height: auto;
+        flex-basis: 60%;
     }
 
-    .mobilenav {
-        display: flex;
+    .list--direction {
+        display: initial;
+    }
+
+    .list--direction > li:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+
+    ul {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 }
 
@@ -348,4 +378,143 @@ footer {
 
 .figure-width {
     width: 400px;
+}
+
+.title.link {
+    max-width: 200px;
+    text-align: center;
+    padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-section {
+    position: relative;
+    width: 80%;
+    max-width: 250px;
+}
+
+.tooltip {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    border: solid 2px;
+    border-radius: 5px;
+    position: absolute;
+    right: -200px;
+    background-color: rgba(255, 255, 255);
+    cursor: pointer;
+}
+
+.help {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.next {
+    background-color: var(--primary-color);
+    color: var(--font-secondary-color);
+    width: 60px;
+    text-align: center;
+    padding: 2px;
+    margin-top: 5px;
+    border-radius: 2px;
+}
+
+.input-section > label {
+    text-align: center;
+}
+
+.input-section > input {
+    margin-bottom: 1.2rem;
+}
+
+.blur {
+    width: 100%;
+    height: 100%;
+    bottom: 0px;
+    right: 0px;
+    position: absolute;
+    background-color: var(--primary-color);
+    opacity: 0.6;
+}
+
+.popup {
+    position: fixed;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--tertiary-color);
+    width: 400px;
+    height: 400px;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    font-size: 2rem;
+    max-width: 80%;
+    backdrop-filter: grayscale(100%);
+    -webkit-backdrop-filter: grayscale(100%);
+}
+
+.popup-buttons {
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+
+.yes {
+    margin-right: 20px;
+    border: solid;
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.no {
+    border: solid;
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.border {
+    border-color: red;
+}
+
+.font-color {
+    color: red;
+}
+
+.accesibility {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: rgb(15, 12, 196);
+    color: var(--font-secondary-color);
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 8px;
+    position: fixed;
+    border-radius: 50%;
+    height: 5rem;
+    bottom: 100px;
+    right: 0px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+#test {
+    visibility: hidden;
 }

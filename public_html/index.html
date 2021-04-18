@@ -11,15 +11,25 @@
             name="description"
             content="30.3.2021. Početna stranica web stranice, ključne riječi: početna, sport, novosti"
         />
-
         <link rel="stylesheet" href="./css/tskobic.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css"
+        />
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!--<script
+            type="text/javascript"
+            src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"
+        ></script>-->
+        <script src="../javascript/tskobic_jquery.js"></script>
     </head>
 
     <body>
         <header class="m-b-md">
             <a class="title link" href="#content">Početna</a>
             <nav class="box-fluid navigation">
-                <ul class="list--unstyled list--horizontal">
+                <ul class="list--unstyled list--direction">
                     <li>
                         <a href="./index.html">Početna</a>
                     </li>
@@ -46,37 +56,10 @@
                     </li>
                 </ul>
             </nav>
-            <nav class="box-fluid mobilenav">
-                <ul class="list--unstyled list--vertical">
-                    <li>
-                        <a href="./index.html">Početna</a>
-                    </li>
-                    <li>
-                        <a href="./autor.html">O autoru</a>
-                    </li>
-                    <li>
-                        <a href="./galerija.html">Galerija</a>
-                    </li>
-                    <li>
-                        <a href="./obrasci/prijava.html">Prijava</a>
-                    </li>
-                    <li>
-                        <a href="./obrasci/registracija.html">Registracija</a>
-                    </li>
-                    <li>
-                        <a href="./obrasci/obrazac.html">Obrazac</a>
-                    </li>
-                    <li>
-                        <a href="./era.html">ERA</a>
-                    </li>
-                    <li>
-                        <a href="./navigacijski.html">Navigacijski dijagram</a>
-                    </li>
-                </ul>
-            </nav>
+
             <section aria-label="social networks" class="social-icons">
                 <img
-                    class="social-icon"
+                    class="social-icon m-l-sm"
                     src="./multimedija/images/facebook.png"
                     alt="facebook"
                 />

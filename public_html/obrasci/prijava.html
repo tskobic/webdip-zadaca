@@ -12,13 +12,26 @@
             content="30.3.2021. Stranica O autoru web stranice, ključne riječi: prijava, sport, novosti"
         />
         <link rel="stylesheet" href="../css/tskobic.css" />
+        <link
+            rel="stylesheet"
+            href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+        />
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script
+            src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+            integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+            crossorigin="anonymous"
+        ></script>
+
+        <script src="../javascript/tskobic_jquery.js"></script>
     </head>
 
     <body>
         <header class="m-b-md">
             <a class="title link" href="#content">Prijava</a>
             <nav class="box-fluid navigation">
-                <ul class="list--unstyled list--horizontal">
+                <ul class="list--unstyled list--direction">
                     <li>
                         <a href="../index.html">Početna</a>
                     </li>
@@ -45,37 +58,10 @@
                     </li>
                 </ul>
             </nav>
-            <nav class="box-fluid mobilenav">
-                <ul class="list--unstyled list--vertical">
-                    <li>
-                        <a href="../index.html">Početna</a>
-                    </li>
-                    <li>
-                        <a href="../autor.html">O autoru</a>
-                    </li>
-                    <li>
-                        <a href="../galerija.html">Galerija</a>
-                    </li>
-                    <li>
-                        <a href="./prijava.html">Prijava</a>
-                    </li>
-                    <li>
-                        <a href="./registracija.html">Registracija</a>
-                    </li>
-                    <li>
-                        <a href="./obrazac.html">Obrazac</a>
-                    </li>
-                    <li>
-                        <a href="../era.html">ERA</a>
-                    </li>
-                    <li>
-                        <a href="../navigacijski.html">Navigacijski dijagram</a>
-                    </li>
-                </ul>
-            </nav>
-            <section aria-label="social networks">
+
+            <section aria-label="social networks" class="social-icons">
                 <img
-                    class="social-icon"
+                    class="social-icon m-l-sm"
                     src="../multimedija/images/facebook.png"
                     alt="facebook"
                 />
@@ -93,6 +79,8 @@
         </header>
         <main id="content">
             <form
+                novalidate
+                id="prijava"
                 class="form centered"
                 method="post"
                 action="http://barka.foi.hr/WebDiP/2020/materijali/zadace/ispis_forme.php"
@@ -102,6 +90,9 @@
 
                 <label for="password">Lozinka:</label>
                 <input type="password" name="password" id="password" />
+
+                <label for="gradovi">Gradovi</label>
+                <input id="gradovi" name="gradovi" type="text" />
 
                 <button
                     type="submit"
