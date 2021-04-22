@@ -80,7 +80,7 @@ h1 {
     height: -moz-fit-content;
 }
 
-input[type="text"] {
+input[type="text"]:not(.datetime) {
     background-color: var(--secondary-color);
 }
 
@@ -416,7 +416,7 @@ footer {
     font-weight: bold;
 }
 
-.next {
+.next-button {
     background-color: var(--primary-color);
     color: var(--font-secondary-color);
     width: 60px;
@@ -430,7 +430,8 @@ footer {
     text-align: center;
 }
 
-.input-section > input {
+.input-section > input,
+.input-section > select {
     margin-bottom: 1.2rem;
 }
 
@@ -460,8 +461,6 @@ footer {
     transform: translate(-50%, 50%);
     font-size: 2rem;
     max-width: 80%;
-    backdrop-filter: grayscale(100%);
-    -webkit-backdrop-filter: grayscale(100%);
 }
 
 .popup-buttons {
@@ -478,6 +477,13 @@ footer {
 }
 
 .no {
+    border: solid;
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.okay {
     border: solid;
     padding: 5px;
     border-radius: 4px;
@@ -515,6 +521,14 @@ footer {
     display: none;
 }
 
-#test {
-    visibility: hidden;
+.valid {
+    background-color: rgb(65, 161, 65);
+}
+
+.nonvalid {
+    background-color: rgb(240, 120, 120);
+}
+
+.disabled {
+    background-color: rgba(0, 0, 0, 0.2);
 }

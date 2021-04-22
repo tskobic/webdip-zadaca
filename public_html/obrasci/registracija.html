@@ -12,6 +12,10 @@
             content="30.3.2021. Stranica registracije, ključne riječi: registracija, sport, novosti"
         />
         <link rel="stylesheet" href="../css/tskobic.css" />
+        <link
+            rel="stylesheet"
+            href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+        />
     </head>
 
     <body>
@@ -66,31 +70,36 @@
         </header>
         <main id="content" class="box">
             <form
+                novalidate
                 class="form centered"
                 method="post"
                 action="http://barka.foi.hr/WebDiP/2020/materijali/zadace/ispis_forme.php"
             >
                 <label for="name">Ime:</label>
-                <input type="text" name="name" id="name" />
+                <input type="text" name="name" id="name" class="name" />
 
                 <label for="surname">Prezime:</label>
-                <input type="text" name="surname" id="surname" />
+                <input type="text" name="surname" id="surname" class="surname" />
 
                 <label for="username">Korisničko ime:</label>
-                <input type="text" name="username" id="username" />
+                <input type="text" name="username" id="username" class="username" />
 
                 <label for="e-mail">Elektronička pošta:</label>
                 <input type="email" name="e-mail" id="e-mail" />
 
                 <label for="password">Lozinka:</label>
-                <input type="password" name="password" id="password" />
+                <input type="password" name="password" id="password" class="password" />
 
                 <label for="confirm_password">Potvrda lozinke:</label>
                 <input
                     type="password"
                     name="confirm password"
                     id="confirm_password"
+                    class="confirm_password"
                 />
+
+                <label for="datetime">Datum i vrijeme:</label>
+                <input type="text" name="datetime" id="datetime" class="datetime" />
 
                 <button
                     type="submit"
@@ -108,18 +117,26 @@
             </div>
             <section aria-label="validation references">
                 <a
-                    href="http://validator.w3.org/check?uri=http://barka.foi.hr/WebDiP/2020/zadaca_02/tskobic/obrasci/registracija.html"
+                    href="http://validator.w3.org/check?uri=http://barka.foi.hr/WebDiP/2020/zadaca_03/tskobic/obrasci/registracija.html"
                     class="m-l-sm"
                 >
                     <img src="../multimedija/images/HTML5.png" alt="html5" />
                 </a>
                 <a
-                    href="https://jigsaw.w3.org/css-validator/validator?uri=http://barka.foi.hr/WebDiP/2020/zadaca_02/tskobic/css/tskobic.css"
+                    href="https://jigsaw.w3.org/css-validator/validator?uri=http://barka.foi.hr/WebDiP/2020/zadaca_03/tskobic/css/tskobic.css"
                     class="m-l-sm"
                 >
                     <img src="../multimedija/images/css3.png" alt="css3" />
                 </a>
             </section>
         </footer>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script
+            src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+            integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+            crossorigin="anonymous"
+        ></script>
+        <script src="../javascript/tskobic_jquery.js"></script>
     </body>
 </html>

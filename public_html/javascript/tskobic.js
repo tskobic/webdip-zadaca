@@ -5,7 +5,7 @@ function Tutorial(domElement) {
     this.init = () => {
         for (let i = 0; i < this.tooltips.length; i++) {
             const tooltip = this.tooltips[i];
-            const nextButton = tooltip.querySelector(".next");
+            const nextButton = tooltip.querySelector(".next-button");
             const expandButton = tooltip.querySelector(".help");
 
             expandButton.addEventListener("click", () => {

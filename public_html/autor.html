@@ -13,12 +13,49 @@
         />
         <link rel="stylesheet" href="./css/tskobic.css" />
         <style>
-            body {
+            html {
+                font-size: 25px;
+            }
+
+            header {
                 filter: grayscale(100%);
             }
 
-            html {
-                font-size: 25px;
+            main {
+                filter: grayscale(100%);
+            }
+
+            footer {
+                filter: grayscale(100%);
+            }
+            .social-icons {
+                flex-direction: column;
+                margin-top: var(--gap-sm);
+                margin-left: var(--gap-sm);
+            }
+
+            img.m-l-sm {
+                margin-left: 0px;
+                margin-bottom: var(--gap-sm);
+            }
+
+            .navigation {
+                flex-direction: column;
+                height: auto;
+                flex-basis: 60%;
+            }
+
+            .list--direction {
+                display: initial;
+            }
+
+            .list--direction > li:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+
+            ul {
+                margin-top: 1rem;
+                margin-bottom: 1rem;
             }
         </style>
     </head>
@@ -119,13 +156,13 @@
             </div>
             <section aria-label="validation references">
                 <a
-                    href="http://validator.w3.org/check?uri=http://barka.foi.hr/WebDiP/2020/zadaca_02/tskobic/autor.html"
+                    href="http://validator.w3.org/check?uri=http://barka.foi.hr/WebDiP/2020/zadaca_03/tskobic/autor.html"
                     class="m-l-sm"
                 >
                     <img src="./multimedija/images/HTML5.png" alt="html5" />
                 </a>
                 <a
-                    href="https://jigsaw.w3.org/css-validator/validator?uri=http://barka.foi.hr/WebDiP/2020/zadaca_02/tskobic/css/tskobic.css"
+                    href="https://jigsaw.w3.org/css-validator/validator?uri=http://barka.foi.hr/WebDiP/2020/zadaca_03/tskobic/css/tskobic.css"
                     class="m-l-sm"
                 >
                     <img src="./multimedija/images/css3.png" alt="css3" />
