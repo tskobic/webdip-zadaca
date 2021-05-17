@@ -20,28 +20,28 @@
             <nav class="box-fluid navigation">
                 <ul class="list--unstyled list--direction">
                     <li>
-                        <a href="../index.html">Početna</a>
+                        <a href="../index.php">Početna</a>
                     </li>
                     <li>
-                        <a href="../autor.html">O autoru</a>
+                        <a href="../autor.php">O autoru</a>
                     </li>
                     <li>
-                        <a href="../galerija.html">Galerija</a>
+                        <a href="../galerija.php">Galerija</a>
                     </li>
                     <li>
-                        <a href="./prijava.html">Prijava</a>
+                        <a href="./prijava.php">Prijava</a>
                     </li>
                     <li>
-                        <a href="./registracija.html">Registracija</a>
+                        <a href="./registracija.php">Registracija</a>
                     </li>
                     <li>
-                        <a href="./obrazac.html">Obrazac</a>
+                        <a href="./obrazac.php">Obrazac</a>
                     </li>
                     <li>
-                        <a href="../era.html">ERA</a>
+                        <a href="../era.php">ERA</a>
                     </li>
                     <li>
-                        <a href="../navigacijski.html">Navigacijski dijagram</a>
+                        <a href="../navigacijski.php">Navigacijski dijagram</a>
                     </li>
                 </ul>
             </nav>

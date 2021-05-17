@@ -12,10 +12,10 @@
             content="30.3.2021. Početna stranica web stranice, ključne riječi: početna, sport, novosti"
         />
         <link rel="stylesheet" href="./css/tskobic.css" />
-        <link
+        <!--<link
             rel="stylesheet"
             href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css"
-        />
+        />-->
     </head>
 
     <body>
@@ -24,28 +24,28 @@
             <nav class="box-fluid navigation">
                 <ul class="list--unstyled list--direction">
                     <li>
-                        <a href="./index.html">Početna</a>
+                        <a href="./index.php">Početna</a>
                     </li>
                     <li>
-                        <a href="./autor.html">O autoru</a>
+                        <a href="./autor.php">O autoru</a>
                     </li>
                     <li>
-                        <a href="./galerija.html">Galerija</a>
+                        <a href="./galerija.php">Galerija</a>
                     </li>
                     <li>
-                        <a href="./obrasci/prijava.html">Prijava</a>
+                        <a href="./obrasci/prijava.php">Prijava</a>
                     </li>
                     <li>
-                        <a href="./obrasci/registracija.html">Registracija</a>
+                        <a href="./obrasci/registracija.php">Registracija</a>
                     </li>
                     <li>
-                        <a href="./obrasci/obrazac.html">Obrazac</a>
+                        <a href="./obrasci/obrazac.php">Obrazac</a>
                     </li>
                     <li>
-                        <a href="./era.html">ERA</a>
+                        <a href="./era.php">ERA</a>
                     </li>
                     <li>
-                        <a href="./navigacijski.html">Navigacijski dijagram</a>
+                        <a href="./navigacijski.php">Navigacijski dijagram</a>
                     </li>
                 </ul>
             </nav>
@@ -245,11 +245,11 @@
             </section>
         </footer>
 
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!--<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script
             type="text/javascript"
             src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"
         ></script>
-        <script src="./javascript/tskobic_jquery.js"></script>
+        <script src="./javascript/tskobic_jquery.js"></script>-->
     </body>
 </html>

@@ -12,10 +12,10 @@
             content="30.3.2021. Stranica registracije, ključne riječi: registracija, sport, novosti"
         />
         <link rel="stylesheet" href="../css/tskobic.css" />
-        <link
+        <!--<link
             rel="stylesheet"
             href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
-        />
+        />-->
     </head>
 
     <body>
@@ -24,28 +24,28 @@
             <nav class="box-fluid navigation">
                 <ul class="list--unstyled list--direction">
                     <li>
-                        <a href="../index.html">Početna</a>
+                        <a href="../index.php">Početna</a>
                     </li>
                     <li>
-                        <a href="../autor.html">O autoru</a>
+                        <a href="../autor.php">O autoru</a>
                     </li>
                     <li>
-                        <a href="../galerija.html">Galerija</a>
+                        <a href="../galerija.php">Galerija</a>
                     </li>
                     <li>
-                        <a href="./prijava.html">Prijava</a>
+                        <a href="./prijava.php">Prijava</a>
                     </li>
                     <li>
-                        <a href="./registracija.html">Registracija</a>
+                        <a href="./registracija.php">Registracija</a>
                     </li>
                     <li>
-                        <a href="./obrazac.html">Obrazac</a>
+                        <a href="./obrazac.php">Obrazac</a>
                     </li>
                     <li>
-                        <a href="../era.html">ERA</a>
+                        <a href="../era.php">ERA</a>
                     </li>
                     <li>
-                        <a href="../navigacijski.html">Navigacijski dijagram</a>
+                        <a href="../navigacijski.php">Navigacijski dijagram</a>
                     </li>
                 </ul>
             </nav>
@@ -131,12 +131,12 @@
             </section>
         </footer>
 
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!--<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script
             src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
             integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
             crossorigin="anonymous"
         ></script>
-        <script src="../javascript/tskobic_jquery.js"></script>
+        <script src="../javascript/tskobic_jquery.js"></script>-->
     </body>
 </html>
