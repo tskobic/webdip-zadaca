@@ -286,7 +286,7 @@
                     <img src="./multimedija/images/HTML5.png" alt="html5" />
                 </a>
                 <a
-                    href="https://jigsaw.w3.org/css-validator/validator?uri=http://barka.foi.hr/WebDiP/2020/zadaca_03/tskobic/css/tskobic.css"
+                    href="https://jigsaw.w3.org/css-validator/validator?uri=http://barka.foi.hr/WebDiP/2020/zadaca_04/tskobic/css/tskobic.css"
                     class="m-l-sm"
                 >
                     <img src="./multimedija/images/css3.png" alt="css3" />

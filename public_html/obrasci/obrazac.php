@@ -93,7 +93,7 @@
                 </div>
 
                 <label for="time">Vrijeme:</label>
-                <input type="time" name="time" id="time" class="validate" />
+                <input type="text" name="time" id="time" class="validate" />
 
                 <div class="flex input-section">
                     <label for="teams">Odaberite tim:</label>
@@ -116,44 +116,40 @@
                     </div>
                 </div>
 
-                <label for="name">Ime:</label>
-                <input type="text" name="name" id="name" />
-
-                <label for="surname">Prezime:</label>
-                <input type="text" name="surname" id="surname" />
+                
 
                 <div class="flex input-section">
                     <fieldset class="m-b-sm validate" id="first_team">
-                        <legend>Europa liga</legend>
-                        <label for="first_team1">Valencia</label>
+                        <legend>Primarna pozicija</legend>
+                        <label for="primary_position1">Napad</label>
                         <input
                             type="radio"
                             name="first_team"
-                            id="first_team1"
-                            class="team"
-                            value="Valencia"
+                            id="primary_position1"
+                            class="position"
+                            value="Napad"
                         />
-                        <label for="first_team2">Real Betis</label>
+                        <label for="primary_position2">Veza</label>
                         <input
                             type="radio"
                             name="first_team"
-                            id="first_team2"
-                            class="team"
-                            value="Real Betis"
+                            id="primary_position2"
+                            class="position"
+                            value="Veza"
                         />
-                        <label for="first_team3">Granada</label>
+                        <label for="primary_position3">Obrana</label>
                         <input
                             type="radio"
                             name="first_team"
-                            id="first_team3"
-                            class="team"
-                            value="Granada"
+                            id="primary_position3"
+                            class="position"
+                            value="Obrana"
                         />
                     </fieldset>
                     <div class="tooltip hidden">
                         <span class="help"> Pomoć </span>
                         <div class="help-message hidden">
-                            Ovdje se odabire tim iz Europa lige
+                            Ovdje se odabire primarna pozicija
                             <span class="next-button"> Dalje </span>
                         </div>
                     </div>
@@ -161,40 +157,46 @@
 
                 <div class="flex input-section">
                     <fieldset class="m-b-sm validate" id="second_team">
-                        <legend>Liga prvaka</legend>
-                        <label for="second_team1">Barcelona</label>
+                        <legend>Sekundarna pozicija</legend>
+                        <label for="secondary_position1">Napad</label>
                         <input
                             type="radio"
                             name="second_team"
-                            id="second_team1"
+                            id="secondary_position1"
                             class="second_team"
-                            value="Barcelona"
+                            value="Napad"
                         />
-                        <label for="second_team2">Chelsea</label>
+                        <label for="secondary_position2">Veza</label>
                         <input
                             type="radio"
                             name="second_team"
-                            id="second_team2"
+                            id="secondary_position2"
                             class="second_team"
-                            value="Chelsea"
+                            value="Veza"
                         />
-                        <label for="second_team3">Hajduk</label>
+                        <label for="secondary_position3">Obrana</label>
                         <input
                             type="radio"
                             name="second_team"
-                            id="second_team3"
+                            id="secondary_position3"
                             class="second_team"
-                            value="Hajduk"
+                            value="Obrana"
                         />
                     </fieldset>
                     <div class="tooltip hidden">
                         <span class="help"> Pomoć </span>
                         <div class="help-message hidden">
-                            Ovdje se odabire tim iz Lige prvaka
+                            Ovdje se odabire sekundarna pozicija
                             <span class="next-button"> Zatvori </span>
                         </div>
                     </div>
                 </div>
+
+                <label for="name">Ime:</label>
+                <input type="text" name="name" id="name" />
+
+                <label for="surname">Prezime:</label>
+                <input type="text" name="surname" id="surname" />
 
                 <fieldset class="m-b-sm">
                     <legend>Statistika</legend>
@@ -204,24 +206,10 @@
                     <label for="dribbles">Dribling:</label>
                     <input type="number" name="dribbles" id="dribbles" />
 
-                    <label for="interceptions">Oduzete lopte:</label>
-                    <input
-                        type="number"
-                        name="interceptions"
-                        id="interceptions"
-                    />
-
                     <label for="assists">Asistencije:</label>
                     <input type="number" name="assists" id="assists" />
 
-                    <label for="passes">Dodavanja:</label>
-                    <input type="number" name="passes" id="passes" />
                 </fieldset>
-
-                <input type="range" />
-                <input type="time" />
-                <input type="month" />
-                <input type="search" />
 
                 <label for="rating">Ocjena:</label>
                 <input type="number" name="rating" id="rating" />
@@ -265,7 +253,7 @@
                     <img src="../multimedija/images/HTML5.png" alt="html5" />
                 </a>
                 <a
-                    href="https://jigsaw.w3.org/css-validator/validator?uri=http://barka.foi.hr/WebDiP/2020/zadaca_03/tskobic/css/tskobic.css"
+                    href="https://jigsaw.w3.org/css-validator/validator?uri=http://barka.foi.hr/WebDiP/2020/zadaca_04/tskobic/css/tskobic.css"
                     class="m-l-sm"
                 >
                     <img src="../multimedija/images/css3.png" alt="css3" />

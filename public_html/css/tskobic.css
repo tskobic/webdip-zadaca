@@ -532,3 +532,12 @@ footer {
 .disabled {
     background-color: rgba(0, 0, 0, 0.2);
 }
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.buttons > .button:not(:last-child) {
+    margin-right: var(--gap-md);
+}

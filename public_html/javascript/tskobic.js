@@ -108,7 +108,7 @@ function Validator() {
     }
 
     function validateFieldset(element) {
-        const radioElements = element.querySelectorAll(".team");
+        const radioElements = element.querySelectorAll(".position");
         checked = false;
         for (let index = 0; index < radioElements.length; index++) {
             const radioElement = radioElements[index];

@@ -1,3 +1,121 @@
+<?php
+    //var_dump($GLOBALS);
+    $putanja = dirname($_SERVER['REQUEST_URI'], 2);
+    //var_dump(__FILE__);
+    //var_dump($putanja);
+    $direktorij = dirname(getcwd());
+    require "$direktorij/baza.class.php";
+    require "$direktorij/sesija.class.php";
+    //require "$direktorij/dnevnik.class.php";
+
+    $autenticiran;
+
+    Sesija::kreirajSesiju();
+    
+    if (isset($_POST['submit'])) {
+        //var_dump($_POST);
+        $greska = '';
+        $poruka = '';
+        foreach ($_POST as $k => $v) {
+            if (($k !== 'name' && $k !== 'surname') && empty($v)) {
+                    $greska .= 'Nije popunjeno: ' . $k . '<br>';
+            }
+        }
+        if($_POST['password'] !== $_POST['confirm_password'])
+        {
+            $greska .= 'Lozinke se ne podudaraju! <br>';
+        }
+        if (empty($greska)) {
+            //$poruka = 'Nema greške!';
+            $veza = new Baza();
+            $veza->spojiDB();
+
+            if($_POST['name'] === '') {
+                $ime = 'NULL';
+            }
+            else {
+                $ime = $_POST['name'];
+            }
+
+            if($_POST['surname'] === '') {
+                $prezime = 'NULL';
+            }
+            else {  
+                $prezime = $_POST['surname'];
+            }
+
+            $korime = $_POST['username'];
+            $email = $_POST['email'];
+            $lozinka = $_POST['password'];
+            $salt = sha1(time());
+            $kriptirano = hash("sha256",$salt."--".$lozinka);
+
+            //$upit = "SELECT *FROM korisnik";
+            $upit = "INSERT INTO dz4_korisnik "
+                    . "(id_korisnik, id_uloga, ime, prezime, korisnicko_ime, email, lozinka, lozinka_sha256) "
+                    . "VALUES "
+                    . "(NULL, '1', '{$ime}', '{$prezime}', '{$korime}', '{$email}', '{$lozinka}', '{$kriptirano}')";
+
+            $rezultat = $veza->updateDB($upit);
+
+            $upit = "SELECT *FROM `DZ4_korisnik` WHERE "
+                    . "`korisnicko_ime`='{$korime}' AND "
+                    . "`lozinka`='{$lozinka}'";
+
+            $rezultat = $veza->selectDB($upit);
+
+            $autenticiran = false;
+            while ($red = mysqli_fetch_array($rezultat)) {
+                //var_dump($red);
+                if ($red) {
+                    $autenticiran = true;
+                    $tip = $red["id_uloga"]; // tip/uloga korisnika
+                    $email = $red["email"];
+                }
+            }
+
+            if ($autenticiran) {
+                $poruka = 'Uspješna prijava!';
+                // slanje maila (na poslužitelju); lokalno treba podesiti SMTP!
+                /*
+                  $mail_to = 'makaniski@foi.unizg.hr';
+                  $mail_from = "From: noreplay@barka.foi.hr";
+                  $mail_subject = '[WebDiP] Slanje maila';
+                  $mail_body = 'Prijava u sustav!';
+
+                  if (mail($mail_to, $mail_subject, $mail_body, $mail_from)) {
+                  echo("Poslana poruka za: '$mail_to'!");
+                  } else {
+                  echo("Problem kod poruke za: '$mail_to'!");
+                  }
+                 */
+
+                // kreiranje kolačića
+                setcookie("autenticiran", $korime, false, '/', false);
+                
+                // kreiranje sesije
+                Sesija::kreirajKorisnika($korime, $tip);
+                header("Location: ../galerija.php");
+            } else {
+                $poruka = 'Neuspješna prijava, pokušajte ponovo!';
+            }
+
+            $veza->zatvoriDB();
+        }
+    }
+
+    // preporuka za izračun sažetka lozinke: korištenje sha1 i sha256 kriptiranja
+    /*
+      // zapis u bazi
+      $salt = sha1(time());
+      $kriptirano = hash("sha256",$salt."--".$lozinka);
+      //citanje iz baze
+      if(hash("sha256",$red['salt']."--".$lozinka) == $red['lozinka']);
+
+     */
+
+?>
+
 <!DOCTYPE html>
 
 <html lang="hr">
@@ -73,8 +191,15 @@
                 novalidate
                 class="form centered"
                 method="post"
-                action="http://barka.foi.hr/WebDiP/2020/materijali/zadace/ispis_forme.php"
+                action=""
             >
+                <div id="greska" style="color:red">
+                    <?php
+                    if (isset($greska)) {
+                        echo "<p>$greska</p>";
+                    }
+                    ?>
+                </div>
                 <label for="name">Ime:</label>
                 <input type="text" name="name" id="name" class="name" />
 
@@ -85,7 +210,7 @@
                 <input type="text" name="username" id="username" class="username" />
 
                 <label for="e-mail">Elektronička pošta:</label>
-                <input type="email" name="e-mail" id="e-mail" />
+                <input type="email" name="email" id="email" />
 
                 <label for="password">Lozinka:</label>
                 <input type="password" name="password" id="password" class="password" />
@@ -98,13 +223,14 @@
                     class="confirm_password"
                 />
 
-                <label for="datetime">Datum i vrijeme:</label>
-                <input type="text" name="datetime" id="datetime" class="datetime" />
+                <!--<label for="datetime">Datum i vrijeme:</label>
+                <input type="text" name="datetime" id="datetime" class="datetime" />-->
 
                 <button
                     type="submit"
                     name="submit"
                     class="button button--primary m-t-md"
+                    value="Registriraj se"
                 >
                     Registriraj se
                 </button>
@@ -123,7 +249,7 @@
                     <img src="../multimedija/images/HTML5.png" alt="html5" />
                 </a>
                 <a
-                    href="https://jigsaw.w3.org/css-validator/validator?uri=http://barka.foi.hr/WebDiP/2020/zadaca_03/tskobic/css/tskobic.css"
+                    href="https://jigsaw.w3.org/css-validator/validator?uri=http://barka.foi.hr/WebDiP/2020/zadaca_04/tskobic/css/tskobic.css"
                     class="m-l-sm"
                 >
                     <img src="../multimedija/images/css3.png" alt="css3" />
