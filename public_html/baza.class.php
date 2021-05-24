@@ -4,14 +4,14 @@ class Baza {
 
     /*
     const server = "localhost";
-    const korisnik = "root";
-    const lozinka = "";
+    const korisnik = "WebDiP2020x119";
+    const lozinka = "12345";
     const baza = "WebDiP2020x119";
     */
     
     const server = "localhost";
-    const korisnik = "WebDiP2020x119";
-    const lozinka = "12345";
+    const korisnik = "root";
+    const lozinka = "";
     const baza = "WebDiP2020x119";
 
     private $veza = null;

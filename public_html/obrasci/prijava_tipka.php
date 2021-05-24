@@ -6,10 +6,6 @@ require "$direktorij/sesija.class.php";
 
 Sesija::kreirajSesiju();
 
-if(empty($_SERVER['HTTP_REFERER'])) {
-    header("Location: ../galerija.php");
-}
-
 $autenticiran;
 
 $greska = "";

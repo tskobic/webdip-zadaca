@@ -38,7 +38,7 @@ class Sesija {
     static function kreirajSesiju() {
          if (session_id() == "") {
             session_name(self::SESSION_NAME);
-            session_save_path("/tmp");
+            //session_save_path("/tmp");
             session_start();
         }
     }
