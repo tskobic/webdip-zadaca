@@ -91,6 +91,8 @@ input[type="text"]:not(.datetime) {
     }
 }
 
+
+
 :root {
     --primary-color: #111;
     --secondary-color: #e8aa01;
@@ -144,7 +146,7 @@ footer {
 
 @media (min-width: 992px) {
     .box {
-        max-width: 1140px;
+        max-width: 1540px;
     }
 }
 
@@ -396,7 +398,7 @@ footer {
 .input-section {
     position: relative;
     width: 80%;
-    max-width: 250px;
+    max-width: 256px;
 }
 
 .tooltip {
@@ -430,9 +432,15 @@ footer {
     text-align: center;
 }
 
-.input-section > input,
+.input-section > input {
+    margin-bottom: 1.2rem;
+    height: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
 .input-section > select {
     margin-bottom: 1.2rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .blur {
@@ -540,4 +548,36 @@ footer {
 
 .buttons > .button:not(:last-child) {
     margin-right: var(--gap-md);
+}
+
+.unstyled-button {
+    border: none;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+    font-family: Helvetica;
+    font-size: initial;
+    color: var(--font-primary-color);
+}
+
+@media screen and (min-width: 1921px) {
+    .unstyled-button {
+        border: none;
+        padding: 0;
+        background: none;
+        cursor: pointer;
+        font-family: Arial;
+        font-size: 25px;
+        color: var(--font-primary-color);
+    }
+    
+}
+
+.unstyled-button:hover {
+    border: none;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+    color: var(--secondary-color);
+    
 }
